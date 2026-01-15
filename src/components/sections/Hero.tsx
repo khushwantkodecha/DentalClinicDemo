@@ -32,7 +32,7 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.2 }}
                             className="block"
                         >
-                            Smile with <span className="text-primary">Confidence</span>.
+                            World-Class Care. <span className="text-primary">Zero Anxiety</span>.
                         </motion.span>
                         <motion.span
                             initial={{ opacity: 0, y: 20 }}
@@ -40,13 +40,14 @@ export function Hero() {
                             transition={{ duration: 0.5, delay: 0.4 }}
                             className="block"
                         >
-                            Live with Joy.
+                            Your Best Smile Awaits.
                         </motion.span>
                     </h1>
 
                     <p className="text-lg text-body mb-8 max-w-lg">
-                        Experience world-class dental care in a relaxing, spa-like environment.
-                        From routine checkups to cosmetic makeovers, we prioritize your comfort.
+                        Join over 5,000+ happy patients who trust us for pain-free checkups, advanced implants, and cosmetic makeovers.
+                        Modern technology meets compassionate care in a relaxed, spa-like setting.
+
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
@@ -59,12 +60,12 @@ export function Hero() {
                             }}
                         >
                             <Calendar size={18} />
-                            Book Online
+                            Book Appointment
                         </Button>
                         <a href="tel:5551234567" className="w-full sm:w-auto">
                             <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2">
                                 <Phone size={18} />
-                                (555) 123-4567
+                                Call Now
                             </Button>
                         </a>
                     </div>
@@ -82,7 +83,7 @@ export function Hero() {
                                 </div>
                             ))}
                         </div>
-                        <p className="font-medium text-gray-600">Trusted by <span className="text-primary font-bold">2,000+</span> happy patients</p>
+                        <p className="font-medium text-gray-600">Trusted by <span className="text-primary font-bold">5,000+</span> patients <span className="mx-2 text-gray-300">|</span> <span className="text-yellow-500">★ 4.9</span> on Google</p>
                     </div>
                 </motion.div>
 
