@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { submitBooking } from "@/app/actions";
+import { createWhatsAppLink } from "@/lib/whatsapp";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -10,12 +11,20 @@ import { Textarea } from "@/components/ui/textarea";
 export function BookingForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [lastSubmission, setLastSubmission] = useState<{ name: string, phone: string, service: string, date: string } | null>(null);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setIsSubmitting(true);
 
         const formData = new FormData(e.currentTarget);
+        setLastSubmission({
+            name: formData.get("name") as string,
+            phone: formData.get("phone") as string,
+            service: formData.get("service") as string,
+            date: formData.get("date") as string,
+        });
+
         const result = await submitBooking(formData);
 
         if (result.success) {
@@ -51,7 +60,17 @@ export function BookingForm() {
                                     Thank you for choosing Lumina Dental. Our team will contact you shortly to confirm your appointment time.
                                 </p>
                                 <Button
-                                    className="mt-6 bg-green-600 hover:bg-green-700"
+                                    className="mt-6 bg-green-600 hover:bg-green-700 w-full mb-3"
+                                    onClick={() => {
+                                        const message = `Hi, I just submitted a booking request.\n\nName: ${lastSubmission?.name}\nPhone: ${lastSubmission?.phone}\nService: ${lastSubmission?.service}\nDate: ${lastSubmission?.date}`;
+                                        window.open(createWhatsAppLink(message), '_blank');
+                                    }}
+                                >
+                                    Send Details via WhatsApp
+                                </Button>
+                                <Button
+                                    variant="outline"
+                                    className="w-full"
                                     onClick={() => setSuccess(false)}
                                 >
                                     Book Another Appointment

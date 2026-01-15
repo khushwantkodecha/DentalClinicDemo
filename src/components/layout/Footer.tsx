@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Smile, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Smile, Facebook, Twitter, Instagram, Linkedin, MessageCircle } from "lucide-react";
 
 export function Footer() {
     return (
@@ -45,6 +45,7 @@ export function Footer() {
                             <li><Link href="#why-us" className="text-gray-400 hover:text-primary transition-colors">Why Us</Link></li>
                             <li><Link href="#dentists" className="text-gray-400 hover:text-primary transition-colors">Our Team</Link></li>
                             <li><Link href="#book" className="text-gray-400 hover:text-primary transition-colors">Book Appointment</Link></li>
+                            <li><a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors flex items-center gap-2"><MessageCircle size={16} /> Chat on WhatsApp</a></li>
                         </ul>
                     </div>
 

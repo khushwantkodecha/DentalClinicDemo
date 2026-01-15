@@ -100,11 +100,13 @@ export function Hero() {
                but user said "Use dummy data and placeholder images".
                I'll use a colored div styling for now to represent the image area effectively or a nice SVG.
            */}
-                    <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl bg-gray-100 h-full min-h-[400px]">
-                        {/* Simulating backend image */}
-                        <div className="absolute inset-0 bg-blue-100 flex items-center justify-center text-blue-300">
-                            <span className="text-6xl">🦷</span>
-                        </div>
+                    <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl h-full min-h-[400px]">
+                        <Image
+                            src="/images/dental-clinic-4.jpg"
+                            alt="Modern Dental Clinic"
+                            fill
+                            className="object-cover object-top"
+                        />
                     </div>
 
                     {/* Decorative elements */}
