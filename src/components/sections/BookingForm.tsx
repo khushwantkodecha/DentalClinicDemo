@@ -34,7 +34,7 @@ export function BookingForm() {
     }
 
     return (
-        <section id="book" className="py-20 bg-blue-50">
+        <section id="booking-form" className="py-20 bg-blue-50">
             <div className="container-custom">
                 <div className="bg-white rounded-3xl overflow-hidden shadow-2xl grid lg:grid-cols-2">
                     {/* Form Side */}

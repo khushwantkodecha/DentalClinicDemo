@@ -6,5 +6,5 @@ export const WHATSAPP_CONFIG = {
 
 export const createWhatsAppLink = (message?: string) => {
     const text = encodeURIComponent(message || WHATSAPP_CONFIG.defaultMessage);
-    return `https://wa.me/916362565821?text=Hello%20I%20would%20like%20to%20book%20a%20dental%20appointment`;
+    return `https://wa.me/${WHATSAPP_CONFIG.phoneNumber}?text=${text}`;
 };

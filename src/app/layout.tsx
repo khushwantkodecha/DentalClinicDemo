@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { FloatingWhatsApp } from "@/components/ui/FloatingWhatsApp";
+import { StickyCTA } from "@/components/layout/StickyCTA";
+import { DemoDisclaimer } from "@/components/ui/DemoDisclaimer";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,7 +32,9 @@ export default function RootLayout({
         className={`${inter.variable} ${playfair.variable} antialiased font-sans`}
       >
         <Navbar />
+        <DemoDisclaimer />
         {children}
+        <StickyCTA />
         <FloatingWhatsApp />
       </body>
     </html>

@@ -59,7 +59,7 @@ export function Navbar() {
                     <Button
                         onClick={(e) => {
                             e.preventDefault();
-                            document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
+                            document.getElementById("booking-form")?.scrollIntoView({ behavior: "smooth" });
                         }}
                     >
                         Book Appointment
@@ -94,7 +94,7 @@ export function Navbar() {
                             onClick={(e) => {
                                 e.preventDefault();
                                 setIsOpen(false);
-                                document.getElementById("book")?.scrollIntoView({ behavior: "smooth" });
+                                document.getElementById("booking-form")?.scrollIntoView({ behavior: "smooth" });
                             }}
                         >
                             Book Appointment
